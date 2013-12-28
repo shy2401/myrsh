@@ -56,6 +56,7 @@ int main(int argc, char *argv[])
     updateRemain(capacities, flow, remain, nNodes);
 
     do {
+      circuits.clear();
       findCircuits(remain, nNodes, circuits);
       existNC = NC_cancel(capacities, flow, remain, nNodes, circuits);
     } while (existNC);
